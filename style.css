@@ -1,28 +1,106 @@
-body {
-    height: 100vh;
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
-.navbar {
-    position: fixed;
+body {
+  height: 100vh;
 }
+
+body,
+h3 {
+  font-family: "Lato", sans-serif;
+}
+
+h3 {
+  color: #36454f;
+}
+
+/* .navbar {
+  position: fixed;
+} */
 
 .navbar-image {
-    width: 2rem;
-    height: auto;
+  width: 2rem;
+  height: auto;
 }
 
 a {
-    border: 2px solid rgb(117, 245, 228);
-    border-radius: 12%;
-    padding: 10px;
+  border: 2px solid rgb(117, 245, 228);
+  border-radius: 12%;
+  padding: 10px;
 }
-@media only screen and (min-width: 640px) {
-    .navbar {
-        flex-direction: column;
-        height: 80vh;
-        width: 10%;
-    }
-    .navbar-home {
-        flex-direction: column;
-    }
+
+main {
+  width: 90vw;
+  margin: 5rem auto;
+  max-width: 1170px;
+}
+
+p {
+  letter-spacing: 0.12rem;
+  font-size: 0.75rem;
+}
+
+.card {
+  background-color: #d3d3d3;
+  height: auto;
+  padding: 1rem 1.2rem;
+  border-radius: 0.25rem;
+  margin: 1rem 0;
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.card-content {
+  background-color: #fff;
+  padding: 1.5rem;
+  border-radius: 0.25rem;
+  margin-bottom: 1rem;
+}
+
+.card-content.second {
+  height: 10rem;
+  background-color: #a7c7e7;
+}
+
+.card-content.third {
+  height: 12rem;
+  background-color: #e9d1c9;
+}
+
+@media screen and (min-width: 640px) {
+  .navbar {
+    flex-direction: column;
+    height: 80vh;
+    width: 25%;
+    position: fixed;
+  }
+
+  .navbar-home {
+    flex-direction: column;
+  }
+
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    margin-left: 10rem;
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
 }
